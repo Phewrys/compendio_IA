@@ -24,7 +24,7 @@
 - [ ] Astar
 - [ ] Genetic Algorithms
 - [ ] Simulated Annealing
-- [ ] Minimax (versão alfa-beta)
+- [x] Minimax (versão alfa-beta)
 - [ ] Expectiminimax
 - [ ] Monte Carlo Tree Search (MCTS)
 - [ ] Q-Learning
@@ -44,19 +44,36 @@ Descreva como o algoritmo funciona.
 <br/>
 <h2 id="a2">Algoritmo 2: Genetic Algorithms e Simulated Annealing</h2>
 
-Genetic Algorithms: Descreva como o algoritmo funciona.
+<h3>Genetic Algorithms</h3>
 
-Simulated Annealing: Descreva como o algoritmo funciona.
+Descreva como o algoritmo funciona.
+
+
+<h3>Simulated Annealing</h3>
+
+Descreva como o algoritmo funciona.
 
 
 <br/>
 <h2 id="a3">Algoritmo 3: Minimax (versão alfa-beta), Expectiminimax e Monte Carlo Tree Search (MCTS)</h2>
 
-Minimax: Descreva como o algoritmo funciona.
+<h3>Minimax (versão alfa-beta)</h3>
 
-Expectiminimax: Descreva como o algoritmo funciona.
+Se já estiver familiarizado com o algoritmo minimax, a versão alfa-beta introduz uma modificação crucial. Antes de examinar o nó filho à direita, é necessário verificar a existência de um nó superior maior/menor que o nó atual. Caso tal nó superior exista, ocorre a poda do nó filho à direita, evitando, assim, a necessidade de avaliá-lo.
 
-Monte Carlo Tree Search: Descreva como o algoritmo funciona.
+Por exemplo, ao analisar um nó no nível MIN, é preciso verificar se há algum nó MAX superior que seja maior que o nó em análise. Da mesma forma, ao analisar um nó no nível MAX, é necessário verificar se existe algum nó MIN superior que seja menor que o nó sendo examinado.
+
+![Exemplo de GIF](./algoritmo_03//minimax-alfa-beta.PNG)
+
+
+<h3>Expectiminimax</h3>
+
+Descreva como o algoritmo funciona.
+
+
+<h3>Monte Carlo Tree Search</h3>
+
+Descreva como o algoritmo funciona.
 
 
 <br/>
