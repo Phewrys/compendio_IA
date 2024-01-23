@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node ./genetic_algorithms.js"
+    "start": "node ./genetic_algorithms.js",
+    "ex": "node ./problem.js"
   },
   "license": "MIT"
 }

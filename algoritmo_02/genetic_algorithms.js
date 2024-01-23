@@ -1,25 +1,3 @@
-
-function initializePopulation(populationSize, genomeLength) {
-    const population = [];
-    for (let i = 0; i < populationSize; i++) {
-        const individual = generateRandomIndividual(genomeLength);
-        population.push(individual);
-    }
-    return population;
-}
-
-function generateRandomIndividual(genomeLength) {
-    let individual = '';
-    for (let i = 0; i < genomeLength; i++) {
-        individual += Math.random() < 0.5 ? '0' : '1';
-    }
-    return individual;
-}
-
-function fitnessFunction(individual) {
-    return individual.split('1').length - 1;
-}
-
 function weightedRandomChoice(population, weights, count) {
     const totalWeight = weights.reduce((sum, weight) => sum + weight, 0);
     const selected = [];
@@ -50,12 +28,14 @@ function mutate(individual, mutationProbability) {
     return individual.split('').map(bit => (Math.random() < mutationProbability) ? (bit === '0' ? '1' : '0') : bit).join('');
 }
 
-export default function geneticAlgorithm(populationSize, genomeLength, mutationProbability, maxGenerations) {
-    let population = initializePopulation(populationSize, genomeLength);
+export default function geneticAlgorithm(population, fitness) {
+    const mutationProbability = 0.01;
+    const maxGenerations = 100;
+    
     let generation = 0;
 
     while (generation < maxGenerations) {
-        const weights = population.map(individual => fitnessFunction(individual));
+        const weights = population.map(individual => fitness(individual));
         const parent1 = weightedRandomChoice(population, weights, 1)[0];
         const parent2 = weightedRandomChoice(population, weights, 1)[0];
 
@@ -71,7 +51,7 @@ export default function geneticAlgorithm(populationSize, genomeLength, mutationP
     }
 
     const bestIndividual = population.reduce((best, current) => {
-        return fitnessFunction(current) > fitnessFunction(best) ? current : best;
+        return fitness(current) > fitness(best) ? current : best;
     }, population[0]);
 
     return bestIndividual;
