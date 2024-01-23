@@ -1,0 +1,11 @@
+{
+  "name": "algoritmo_01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./astar.js",
+    "ex": "node ./puzzle.js"
+  },
+  "license": "MIT"
+}

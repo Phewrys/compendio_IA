@@ -1,0 +1,11 @@
+{
+  "name": "algoritmo_02",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./genetic_algorithms.js",
+    "ex": "node ./problem.js"
+  },
+  "license": "MIT"
+}
