@@ -25,7 +25,7 @@
 - [ ] Genetic Algorithms
 - [ ] Simulated Annealing
 - [x] Minimax (versão alfa-beta)
-- [ ] Expectiminimax
+- [x] Expectiminimax
 - [ ] Monte Carlo Tree Search (MCTS)
 - [ ] Q-Learning
 - [x] Breadth First Search - BFS (Busca em largura)
@@ -68,7 +68,9 @@ Por exemplo, ao analisar um nó no nível MIN, é preciso verificar se há algum
 
 <h3>Expectiminimax</h3>
 
-Descreva como o algoritmo funciona.
+O expectiminimax é bastante semelhante ao minimax, distinguindo-se no fato de que o primeiro nível analisado é denominado "CHANGE". Nesse nível, o valor é determinado pela média ponderada de seus filhos. Todas as outras comparações seguem a mesma lógica operacional do minimax.
+
+![Exemplo de GIF](./algoritmo_03//expectiminimax.PNG)
 
 
 <h3>Monte Carlo Tree Search</h3>
