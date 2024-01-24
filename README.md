@@ -21,8 +21,8 @@
 <br/>
 <h2 id="ai">Algoritmos Implementados</h2>
 
-- [ ] Astar
-- [ ] Genetic Algorithms
+- [x] Astar
+- [x] Genetic Algorithms
 - [ ] Simulated Annealing
 - [x] Minimax (versão alfa-beta)
 - [x] Expectiminimax
