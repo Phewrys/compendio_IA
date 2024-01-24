@@ -38,7 +38,8 @@
 <br/>
 <h2 id="a1">Algoritmo 1: Astar</h2>
 
-Descreva como o algoritmo funciona.
+O algoritmo A* é uma busca informada que combina a busca de custo mínimo com uma heurística para encontrar o caminho mais eficiente entre dois pontos em um grafo ou espaço de estados. Utiliza a função de avaliação 
+f(n)=g(n)+h(n), onde g(n) é o custo do caminho até o nó atual e h(n) é uma heurística que estima o custo restante até o objetivo. Essa combinação resulta em uma busca eficiente e otimizada para encontrar a solução.
 
 
 <br/>
@@ -46,13 +47,7 @@ Descreva como o algoritmo funciona.
 
 <h3>Genetic Algorithms</h3>
 
-Descreva como o algoritmo funciona.
-
-
-<h3>Simulated Annealing</h3>
-
-Descreva como o algoritmo funciona.
-
+A função de Ackley é uma função de teste comumente usada para avaliar algoritmos de otimização. Projetada para desafiar métodos de busca global, possui numerosos mínimos locais, mas apenas um mínimo global em f(0,0)=0. A função incorpora uma combinação de termos exponenciais e trigonométricos.
 
 <br/>
 <h2 id="a3">Algoritmo 3: Minimax (versão alfa-beta), Expectiminimax e Monte Carlo Tree Search (MCTS)</h2>
@@ -71,18 +66,6 @@ Por exemplo, ao analisar um nó no nível MIN, é preciso verificar se há algum
 O expectiminimax é bastante semelhante ao minimax, distinguindo-se no fato de que o primeiro nível analisado é denominado "CHANGE". Nesse nível, o valor é determinado pela média ponderada de seus filhos. Todas as outras comparações seguem a mesma lógica operacional do minimax.
 
 ![Exemplo de GIF](./algoritmo_03//expectiminimax.PNG)
-
-
-<h3>Monte Carlo Tree Search</h3>
-
-Descreva como o algoritmo funciona.
-
-
-<br/>
-<h2 id="a4">Algoritmo 4: Q-Learning</h2>
-
-Descreva como o algoritmo funciona.
-
 
 <br/>
 <h2 id="o">Outros</h2>
