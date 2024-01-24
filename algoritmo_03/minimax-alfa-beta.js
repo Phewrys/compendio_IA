@@ -47,7 +47,7 @@ function createNode(value, children = []) {
     return minEval;
   }
   
-// Exemplo de uso com valores apenas nos nós folha
+// Exemplo de uso
 const tree = createNode(null, [
     createNode(null, [
       createNode(5),

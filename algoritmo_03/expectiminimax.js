@@ -6,43 +6,39 @@ function createNode(value, children = []) {
     };
   }
   
-  // Função Expectiminimax com poda alfa-beta
-  function expectiminimaxAlphaBeta(node, depth, alpha, beta, maximizingPlayer) {
+  // Função Expectiminimax
+  function expectiminimax(node, depth, maximizingPlayer) {
     if (depth === 0 || node.children.length === 0) {
       return node.value;
     }
   
-    if (!maximizingPlayer) {
-      return expectiValue(node, depth, alpha, beta);
+    if (maximizingPlayer) {
+      return maxValue(node, depth);
     } else {
-      return maxValue(node, depth, alpha, beta);
+      return expectiValue(node, depth);
     }
   }
   
   // Função para calcular o valor máximo
-  function maxValue(node, depth, alpha, beta) {
+  function maxValue(node, depth) {
     let maxEval = -Infinity;
     for (let child of node.children) {
-      let eval = expectiminimaxAlphaBeta(child, depth - 1, alpha, beta, false);
+      let eval = expectiminimax(child, depth - 1, false);
       maxEval = Math.max(maxEval, eval);
-      alpha = Math.max(alpha, eval);
-      if (beta <= alpha) {
-        break; // Poda alfa-beta
-      }
     }
     return maxEval;
   }
   
-  // Função para calcular o valor esperado (para jogadores de chance)
-  function expectiValue(node, depth, alpha, beta) {
+  // Função para calcular o valor esperado
+  function expectiValue(node, depth) {
     let expectedValue = 0;
     for (let child of node.children) {
-      expectedValue += expectiminimaxAlphaBeta(child, depth - 1, alpha, beta, true);
+      expectedValue += expectiminimax(child, depth - 1, true);
     }
     return expectedValue / node.children.length;
   }
   
-  // Exemplo de uso com valores apenas nos nós folha
+  // Exemplo de uso
   const tree = createNode(null, [
     createNode(null, [
       createNode(5),
@@ -54,5 +50,6 @@ function createNode(value, children = []) {
     ]),
   ]);
   
-  const result = expectiminimaxAlphaBeta(tree, 3, -Infinity, Infinity, true);
+  const result = expectiminimax(tree, 3, true);
   console.log("Resultado:", result);
+  
