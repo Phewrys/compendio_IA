@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node ./genetic_algorithms.js",
-    "ex": "node ./problem.js"
+    "ex": "node ./problem.js",
+    "ex2": "node ./problem_2.js"
   },
   "license": "MIT"
 }

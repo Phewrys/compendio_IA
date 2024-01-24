@@ -30,7 +30,7 @@ function initializePopulation(populationSize, genomeLength) {
     return population;
 }
 
-const examplePopulation = initializePopulation(50, 2);
+const examplePopulation = initializePopulation(50, 4);
 const bestSolution = geneticAlgorithm(examplePopulation, fitnessFunction);
 console.log("Melhor solução encontrada:", bestSolution);
 
